@@ -37,13 +37,25 @@ public class MoreActivity extends AppCompatActivity {
         nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent;
                 switch (item.getItemId()){
                     case R.id.nav_home:
                         Intent inte=new Intent(getApplicationContext(),Home_Page.class);
                         startActivity(inte);
                         break;
+                    case R.id.nav_menu:
+                        Toast.makeText(getApplicationContext(), "Menu", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_bucket:
+                        intent=new Intent(getApplicationContext(),BucketActivity.class);
+                        startActivity(intent);
+                        break;
                     case R.id.nav_more:
-                        Intent intent=new Intent(getApplicationContext(),MoreActivity.class);
+                        intent=new Intent(getApplicationContext(),MoreActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_logout:
+                        intent=new Intent(getApplicationContext(),MainActivity.class);
                         startActivity(intent);
                         break;
                 }

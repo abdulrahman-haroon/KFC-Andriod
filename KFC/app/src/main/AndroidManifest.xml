@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Promotion_Deals"></activity>
-        <activity android:name=".Home_Page" />
+        <activity android:name=".BucketActivity" android:label="BUCKET" />
         <activity
             android:name=".MoreActivity"
             android:label="MORE" />

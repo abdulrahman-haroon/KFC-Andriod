@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void onClickGuest(View view){
-        Intent intent=new Intent(this,MoreActivity.class);
+        Intent intent=new Intent(this,BucketActivity.class);
         startActivity(intent);
     }
     public void onClickLogin(View view){

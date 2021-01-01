@@ -7,10 +7,22 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="HOME" />
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/ic_menu"
+            android:title="Menu" />
+        <item
+            android:id="@+id/nav_bucket"
+            android:icon="@drawable/bucket"
+            android:title="Bucket" />
         <item
             android:id="@+id/nav_more"
             android:icon="@drawable/ic_more"
-            android:title="MORE" />
+            android:title="More" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
     </group>
 </menu>
