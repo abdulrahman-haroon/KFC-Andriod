@@ -119,13 +119,14 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
             if(reg_pass.equals(reg_rep_pass)){
                 UserRegHelper user=new UserRegHelper(reg_email,reg_pass,reg_firstName,reg_lastName,reg_address,reg_postal,reg_phoneNo,"Pakistan",city);
                 reference.child(reg_phoneNo).setValue(user);
+                Toast.makeText(this, "Successfully Registered", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
             }
             else
             {
                 Toast.makeText(this, "Password Didn't Match", Toast.LENGTH_SHORT).show();
             }
         }
-
-
     }
 }
