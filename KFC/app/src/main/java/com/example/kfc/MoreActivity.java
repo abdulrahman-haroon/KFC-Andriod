@@ -39,7 +39,8 @@ public class MoreActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.nav_home:
-                        Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
+                        Intent inte=new Intent(getApplicationContext(),HomePage.class);
+                        startActivity(inte);
                         break;
                     case R.id.nav_more:
                         Intent intent=new Intent(getApplicationContext(),MoreActivity.class);
