@@ -40,7 +40,8 @@ public class MoreActivity extends AppCompatActivity {
                 Intent intent;
                 switch (item.getItemId()){
                     case R.id.nav_home:
-                        Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
+                        Intent inte=new Intent(getApplicationContext(),HomePage.class);
+                        startActivity(inte);
                         break;
                     case R.id.nav_menu:
                         Toast.makeText(getApplicationContext(), "Menu", Toast.LENGTH_SHORT).show();

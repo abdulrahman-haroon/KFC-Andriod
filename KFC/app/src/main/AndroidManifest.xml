@@ -13,6 +13,10 @@
         <activity
             android:name=".MoreActivity"
             android:label="MORE" />
+        <activity android:name=".Home_Page"></activity>
+        <activity
+            android:name=".MoreActivity"
+            android:label="MORE" />
         <activity
             android:name=".RegisterActivity"
             android:label="REGISTER"
