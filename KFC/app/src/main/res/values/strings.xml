@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">KFC</string>
+    <string name="login">Login</string>
+    <string name="no_account">Don\'t Have an Account?</string>
+    <string name="continue_guest">Continue as Guest</string>
+    <string name="register"><u>Register Now</u></string>
+    <string name="user_account">USER ACCOUNT</string>
+    <string name="contact_info">CONTACT INFORMATION</string>
+    <string name="login_here"><u>Login Here</u></string>
+    <string name="already_have_account">Already have an account? </string>
+
+    <string name="store_location">Store Location  </string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us </string>
+    <string name="mitao_bhook">Mitao Bhook</string>
+    <string name="our_secret_recipe">Our secret recipe</string>
+    <string name="privacy_policy">Pivacy Policy</string>
+    <string name="terms_condition">Terms and conditions</string>
+
+    <!--Nav-->
+    <string name="open_nav">open</string>
+    <string name="close_nav">close</string>
+
+
+    <string-array name="country">
+        <item>Country</item>
+        <item>Pakistan</item>
+    </string-array>
+    <string-array name="city">
+        <item>City</item>
+        <item>Rawalpindi</item>
+        <item>Islamabad</item>
+        <item>Karachi</item>
+        <item>Abbottabad</item>
+        <item>Bahawalpur</item>
+    </string-array>
+
+
+</resources>
