@@ -39,7 +39,7 @@ public class MoreActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.nav_home:
-                        Intent inte=new Intent(getApplicationContext(),HomePage.class);
+                        Intent inte=new Intent(getApplicationContext(),Home_Page.class);
                         startActivity(inte);
                         break;
                     case R.id.nav_more:

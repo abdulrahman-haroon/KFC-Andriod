@@ -6,4 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".Home_Page">
 
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="819dp"
+        android:layout_height="1290dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/homepic_1"
+
+                android:layout_width="387dp"
+                android:layout_height="444dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="304dp"
+                android:layout_marginLeft="304dp"
+                android:layout_marginTop="503dp"
+                android:layout_marginEnd="128dp"
+                android:layout_marginRight="128dp"
+                android:layout_marginBottom="343dp"
+                android:onClick="onClickDeals"
+                android:src="@drawable/pro_1" />
+
+            <ImageView
+                android:id="@+id/homepic_2"
+                android:layout_width="197dp"
+                android:layout_height="307dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="303dp"
+                android:layout_marginLeft="303dp"
+                android:layout_marginTop="872dp"
+                android:layout_marginEnd="319dp"
+                android:layout_marginRight="319dp"
+                android:layout_marginBottom="111dp"
+                android:onClick="onClickDeal_2"
+                android:padding="5dp"
+                android:src="@drawable/deal2" />
+
+            <ImageView
+                android:id="@+id/homepic_3"
+                android:layout_width="191dp"
+                android:layout_height="370dp"
+                android:layout_alignStart="@+id/homepic_2"
+                android:layout_alignLeft="@+id/homepic_2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="197dp"
+                android:layout_marginLeft="197dp"
+                android:layout_marginTop="843dp"
+                android:layout_marginEnd="128dp"
+                android:layout_marginRight="128dp"
+                android:layout_marginBottom="77dp"
+                android:onClick="onClickDeals_3"
+                android:padding="5dp"
+                android:src="@drawable/deal3" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textdeal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/textdeal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/textdeal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
