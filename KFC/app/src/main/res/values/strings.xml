@@ -17,6 +17,9 @@
     <string name="privacy_policy">Pivacy Policy</string>
     <string name="terms_condition">Terms and conditions</string>
 
+    <string name="hungry">Hungry? Add something to your bucket!!!</string>
+    <string name="start_order">Start Your Order</string>
+
     <!--Nav-->
     <string name="open_nav">open</string>
     <string name="close_nav">close</string>
