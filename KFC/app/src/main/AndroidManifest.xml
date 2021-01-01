@@ -11,7 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Promotion_Deals"></activity>
         <activity android:name=".BucketActivity" android:label="BUCKET" />
-        <activity
+        <activity android:name=".Home_Page"></activity>
+
+    <activity
             android:name=".MoreActivity"
             android:label="MORE" />
         <activity
