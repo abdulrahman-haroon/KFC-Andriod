@@ -19,9 +19,6 @@ import java.util.List;
 
 public class MenuDetails extends AppCompatActivity {
     private RecyclerView recyclerView;
-    NavigationView nav;
-    ActionBarDrawerToggle toggle;
-    DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,44 +26,9 @@ public class MenuDetails extends AppCompatActivity {
         setContentView(R.layout.activity_menu_details);
         Toolbar toolbar = findViewById(R.id.Menu_Details_toolbar);
         setSupportActionBar(toolbar);//setting the Action bar of this activity.
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        nav=findViewById(R.id.navigation_menu_details);
-        drawerLayout=findViewById(R.id.drawer_menu_details);
-
-        toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_nav,R.string.close_nav);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Intent intent;
-                switch (item.getItemId()){
-                    case R.id.nav_home:
-
-                        break;
-                    case R.id.nav_menu:
-
-                        intent=new Intent(getApplicationContext(),Menu.class);
-                        startActivity(intent);
-                        break;
-                    case R.id.nav_bucket:
-                        intent=new Intent(getApplicationContext(),BucketActivity.class);
-                        startActivity(intent);
-                        break;
-                    case R.id.nav_more:
-                        intent=new Intent(getApplicationContext(),MoreActivity.class);
-                        startActivity(intent);
-                        break;
-                    case R.id.nav_logout:
-                        intent=new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(intent);
-                        break;
-                }
-                return false;
-            }
-        });
         Intent intent=getIntent();
         String dbname=intent.getStringExtra("DB_NAME");
 
