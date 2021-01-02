@@ -92,4 +92,8 @@ public class MoreActivity extends AppCompatActivity {
         startActivity(browserIntent);
     }
 
+    public void DealoneClick(View view) {
+        Intent i=new Intent(this,Promotion_Deals.class);
+        startActivity(i);
+    }
 }

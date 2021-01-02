@@ -39,7 +39,8 @@ public class BucketActivity extends AppCompatActivity {
                 Intent intent;
                 switch (item.getItemId()){
                     case R.id.nav_home:
-                        Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
+                        Intent inte=new Intent(getApplicationContext(),Home_Page.class);
+                        startActivity(inte);
                         break;
                     case R.id.nav_menu:
                         Toast.makeText(getApplicationContext(), "Menu", Toast.LENGTH_SHORT).show();

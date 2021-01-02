@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,39 +13,260 @@
         layout="@layout/toolbar"
 
         />
-    <GridLayout
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="68dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toBottomOf="@+id/pro_toolbar"
+        app:layout_constraintVertical_bias="0.678">
+
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/p1_Cv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-
-
-        </androidx.cardview.widget.CardView>
+            android:layout_above="@+id/cardviewdeal2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            tools:ignore="UnknownId" />
 
         <ImageView
-            android:id="@+id/Promtion_1"
+            android:id="@+id/imagedeal2"
+            android:onClick="DealoneClick"
+            android:layout_width="wrap_content"
+            android:layout_height="277dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="445dp"
+            app:srcCompat="@drawable/deal2" />
+
+        <TextView
+            android:id="@+id/titledeal"
+            android:layout_width="112dp"
+            android:layout_height="54dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="285dp"
+            android:layout_marginEnd="262dp"
+            android:layout_marginRight="262dp"
+            android:layout_marginBottom="378dp"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:text="Duo deal" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="101dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="298dp"
+            android:layout_marginLeft="298dp"
+            android:layout_marginTop="287dp"
+            android:layout_marginEnd="-6dp"
+            android:layout_marginRight="-6dp"
+            android:layout_marginBottom="386dp"
+
+            android:textSize="18dp"
+            android:text="350Rs" />
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="352dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="326dp"
+            android:textSize="20dp"
+
+            android:text="Indulge in the taste of crispy Zinger Burger" />
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="360dp"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:src="@drawable/pro_1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-    </GridLayout>
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/r1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginEnd="-5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_marginBottom="7dp"
+            tools:ignore="UnknownId">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="408dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:id="@+id/deatils"
+                        android:layout_width="179dp"
+                        android:layout_height="37dp"
+                        android:layout_alignBottom="@+id/_dynamic"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="195dp"
+                        android:layout_marginLeft="195dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginBottom="156dp"
+                        android:text="Baffalo wings"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/SelectMeal"
+                        android:layout_width="165dp"
+                        android:layout_height="32dp"
+                        android:layout_alignBottom="@+id/_dynamic"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="214dp"
+                        android:layout_marginRight="214dp"
+                        android:layout_marginBottom="141dp"
+                        android:text="Select Meal"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/create_account_btn"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="327dp"
+                        android:layout_marginLeft="327dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="256dp"
+                        android:background="@drawable/arrowdown"
+                        android:textColor="@color/colorBlack" />
+
+                    <RadioGroup
+                        android:id="@+id/deals"
+                        android:layout_width="370dp"
+                        android:layout_height="118dp"
+                        android:layout_alignBottom="@+id/_dynamic"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="49dp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginBottom="14dp">
+
+                        <RadioButton
+                            android:id="@+id/buffalowings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="RadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/Thaisweet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="RadioButton" />
+
+                        <RadioButton
+                            android:id="@+id/TanyMasala"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="RadioButton" />
+
+
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

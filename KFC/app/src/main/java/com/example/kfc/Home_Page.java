@@ -1,33 +1,82 @@
 package com.example.kfc;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class Home_Page extends AppCompatActivity {
 
-    ImageView imageView1,imageView2,imageView3;
-    CardView cardView;
+    NavigationView nav;
+    ActionBarDrawerToggle toggle;
+    DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home__page);
 
-        cardView=(CardView) findViewById(R.id.cardView);
-        imageView1=(ImageView) findViewById(R.id.homepic_1);
-        imageView2=(ImageView) findViewById(R.id.homepic_2);
-        imageView3=(ImageView) findViewById(R.id.homepic_3);
+        Toolbar toolbar=findViewById(R.id.home_toolbar);
+     setSupportActionBar(toolbar);
+
+     nav=findViewById(R.id.navigation_menu_home);
+     drawerLayout=findViewById(R.id.drawer_home);
+
+     toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_nav,R.string.close_nav);
+     drawerLayout.addDrawerListener(toggle);
+     toggle.syncState();
+
+        nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent;
+                switch (item.getItemId()){
+                    case R.id.nav_home:
+                        Intent i=new Intent(getApplicationContext(),Promotion_Deals.class);
+                        i.putExtra("Promotion",R.drawable.pro_1);
+                        startActivity(i);
+                    case R.id.nav_menu:
+                        Toast.makeText(getApplicationContext(), "Menu", Toast.LENGTH_SHORT).show();
+                       // intent=new Intent(getApplicationContext(),Menu.class);
+                        //startActivity(intent);
+                        break;
+                    case R.id.nav_bucket:
+                        intent=new Intent(getApplicationContext(),BucketActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_more:
+                        intent=new Intent(getApplicationContext(),MoreActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_logout:
+                        intent=new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+                return false;
+            }
+        });
+
+
+
+
     }
 
-    public void onClickDeals(View view) {
+    public void DealoneClick(View view) {
 
         Intent i=new Intent(this,Promotion_Deals.class);
         i.putExtra("Promotion",R.drawable.pro_1);
-        i.putExtra("Title",R.id.textdeal1);
+        //i.putExtra("Title",R.id.textdeal1);
         startActivity(i);
 
 

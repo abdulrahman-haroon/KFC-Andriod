@@ -9,16 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Promotion_Deals"></activity>
+
         <activity android:name=".BucketActivity" android:label="BUCKET" />
-        <activity android:name=".Home_Page" android:label="@string/home_page"/>
 
 
+        <activity android:name=".Home_Page" android:label="Home"/>
+        <activity android:name=".Promotion_Deals"  android:label="Sharing"></activity>
 
 
     <activity
             android:name=".MoreActivity"
             android:label="MORE" />
+
         <activity
             android:name=".RegisterActivity"
             android:label="REGISTER"
