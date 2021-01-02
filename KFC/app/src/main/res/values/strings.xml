@@ -39,5 +39,23 @@
         <item>Bahawalpur</item>
     </string-array>
 
+    <string-array name="menuItems">
+        <item>Everyday value</item>
+        <item>Make it a Meal</item>
+        <item>Signature Boxes</item>
+        <item>Sharing</item>
+        <item>Snacks</item>
+    </string-array>
+
+    <string-array name="dbNames">
+        <item>meals</item>
+        <item>snacks</item>
+        <item>meals</item>
+        <item>snacks</item>
+        <item>meals</item>
+
+
+    </string-array>
+
 
 </resources>

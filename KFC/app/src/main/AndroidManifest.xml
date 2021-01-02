@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Promotion_Deals"></activity>
-        <activity android:name=".BucketActivity" android:label="BUCKET" />
-        <activity android:name=".Home_Page" android:label="@string/home_page"/>
+        <activity android:name=".Menu">
 
+        </activity>
+        <activity android:name=".Promotion_Deals" />
+        <activity
+            android:name=".BucketActivity"
+            android:label="BUCKET" />
+        <activity
+            android:name=".Home_Page"
+            android:label="@string/home_page" />
 
-
-
-    <activity
+        <activity
             android:name=".MoreActivity"
             android:label="MORE" />
         <activity
@@ -25,6 +29,7 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" />
         <activity
+
             android:name=".SplashActivity"
             android:theme="@style/SplashScreen">
             <intent-filter>
