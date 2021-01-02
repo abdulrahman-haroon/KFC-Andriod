@@ -20,7 +20,7 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
 
-        Toolbar toolbar = findViewById(R.id.more_toolbar);
+        Toolbar toolbar = findViewById(R.id.menu_toolbar);
         setSupportActionBar(toolbar);//setting the Action bar of this activity.
 
         recyclerView = (RecyclerView) findViewById(R.id.menu_recycler_view);
