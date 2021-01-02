@@ -21,4 +21,5 @@
         <item name="windowActionBar">false</item>
         <item name="fontFamily">@font/darkergrotesqueregular</item>
     </style>
+
 </resources>
