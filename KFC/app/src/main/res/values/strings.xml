@@ -39,18 +39,22 @@
         <item>Bahawalpur</item>
     </string-array>
 
-    <string-array name="selectflavor">
-        <item>Baffalo Wings</item>
-        <item>Thai Sweet Chilli Wings</item>
-        <item>Tangy Masala Wings</item>
+    <string-array name="menuItems">
+        <item>Everyday value</item>
+        <item>Make it a Meal</item>
+        <item>Signature Boxes</item>
+        <item>Sharing</item>
+        <item>Snacks</item>
     </string-array>
 
-    <string-array name="addons">
-        <item>Dinner Roll</item>
-        <item>Mayo Dip</item>
-        <item>Hot Wings</item>
-        <item>Fresh Fries Bucket(Mayo)</item>
-        <item>Fresh Fries Bucket(Vietnamese)</item>
+    <string-array name="dbNames">
+        <item>meals</item>
+        <item>snacks</item>
+        <item>meals</item>
+        <item>snacks</item>
+        <item>meals</item>
+
+
     </string-array>
 
 
