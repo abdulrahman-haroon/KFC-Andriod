@@ -37,28 +37,16 @@ public class Promotion_Deals extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_promotion__deals);
 
-        Toolbar toolbar = findViewById(R.id.pro_toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = findViewById(R.id.pro_toolbar);
+       // setSupportActionBar(toolbar);
 
 
 
 
     }
+
+
     //deal image 1 view
-    public void onRadioButtonClicked(View view) {
-        boolean checked=((RadioButton) view).isChecked();
-
-        RadioButton radioButton;
-        switch (view.getId()) {
-            case R.id.buffalowings:
-                if(checked)
-                {
-
-                }
-                break;
-        }
-    }
-
     public void DealoneClick(View view) {
         Intent i = new Intent(this, Home_Page.class);
 
@@ -70,4 +58,28 @@ public class Promotion_Deals extends AppCompatActivity {
         }
         startActivity(i);
     }
+    public void DealtwoClick(View view) {
+        Intent i = new Intent(this, Home_Page.class);
+
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null) {
+            int resId = bundle.getInt("Promotion");
+            imageView.setImageResource(resId);
+        }
+        startActivity(i);
+    }
+    public void DealthreeClick(View view) {
+        Intent i = new Intent(this, Home_Page.class);
+
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null) {
+            int resId = bundle.getInt("Promotion");
+            imageView.setImageResource(resId);
+        }
+        startActivity(i);
+    }
+
+
 }

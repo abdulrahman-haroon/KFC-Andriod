@@ -24,8 +24,8 @@
 
     <ImageView
         android:id="@+id/deal1"
-        android:layout_width="412dp"
-        android:layout_height="332dp"
+        android:layout_width="398dp"
+        android:layout_height="359dp"
         android:onClick="DealoneClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,8 +36,9 @@
 
     <ImageView
         android:id="@+id/deal2"
-        android:layout_width="178dp"
-        android:layout_height="161dp"
+        android:layout_width="174dp"
+        android:layout_height="359dp"
+        android:onClick="DealtwoClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
@@ -48,14 +49,15 @@
 
     <ImageView
         android:id="@+id/deal3"
-        android:layout_width="178dp"
-        android:layout_height="191dp"
+        android:layout_width="187dp"
+        android:layout_height="361dp"
+        android:onClick="DealthreeClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/deal1"
-        app:layout_constraintVertical_bias="0.155"
+        app:layout_constraintVertical_bias="0.238"
         app:srcCompat="@drawable/deal3" />
 
 

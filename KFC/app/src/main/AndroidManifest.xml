@@ -12,6 +12,7 @@
         <activity android:name=".Promotion_Deals"></activity>
         <activity android:name=".BucketActivity" android:label="BUCKET" />
         <activity android:name=".Home_Page" android:label="@string/home_page"/>
+        <activity android:name=".Menu"/>
 
 
 

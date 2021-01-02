@@ -98,4 +98,14 @@ public class MoreActivity extends AppCompatActivity {
         Intent i=new Intent(this,Promotion_Deals.class);
         startActivity(i);
     }
+
+    public void DealtwoClick(View view) {
+        Intent i=new Intent(this,Promotion_Deals.class);
+        startActivity(i);
+    }
+
+    public void DealthreeClick(View view) {
+        Intent i=new Intent(this,Promotion_Deals.class);
+        startActivity(i);
+    }
 }
