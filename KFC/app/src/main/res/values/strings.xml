@@ -38,24 +38,26 @@
         <item>Abbottabad</item>
         <item>Bahawalpur</item>
     </string-array>
-
+    <!--Menu-->
     <string-array name="menuItems">
         <item>Everyday value</item>
         <item>Make it a Meal</item>
         <item>Signature Boxes</item>
-        <item>Sharing</item>
-        <item>Snacks</item>
+        <item>Sharing Meals</item>
+        <item>Favourite Snacks</item>
+        <item>Promotions </item>
     </string-array>
-
+    <!--DB Names-->
     <string-array name="dbNames">
+        <item>everyday</item>
         <item>meals</item>
+        <item>box</item>
+        <item>sharing</item>
         <item>snacks</item>
-        <item>meals</item>
-        <item>snacks</item>
-        <item>meals</item>
-
-
+        <item>promotion</item>
     </string-array>
+    <string name="order">ORDER</string>
+
 
 
 </resources>

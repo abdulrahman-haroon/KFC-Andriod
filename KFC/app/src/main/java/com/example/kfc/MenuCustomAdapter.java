@@ -58,10 +58,9 @@ public class MenuCustomAdapter extends    RecyclerView.Adapter<MenuCustomAdapter
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Items", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(context, MenuDetails.class);
-//                intent.putExtra("DB_NAME", dataSet.get(listPosition).getDbName());
-//                activity.startActivityForResult(intent, 1);
+                Intent intent = new Intent(context, MenuDetails.class);
+                intent.putExtra("DB_NAME", dataSet.get(listPosition).getDbName());
+                activity.startActivityForResult(intent, 1);
             }
         });
     }
