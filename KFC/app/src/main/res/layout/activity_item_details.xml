@@ -21,22 +21,24 @@
         />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
+        android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:layout_marginLeft="2dp"
+        android:background="@color/colorWhite"
+        android:gravity="center"
         android:orientation="horizontal"
-       android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:paddingVertical="10dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:paddingVertical="10dp"
-        android:background="@color/colorWhite">
+        app:layout_constraintVertical_bias="1.0">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,9 +51,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
 
-                app:srcCompat="@drawable/minus"
                 android:background="@color/colorWhite"
-                android:onClick="onClickSubtract"/>
+                android:onClick="onClickSubtract"
+                app:srcCompat="@drawable/minus" />
 
             <TextView
                 android:id="@+id/item_count"
@@ -59,34 +61,33 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textSize="20sp"
+                android:text="1"
                 android:textColor="@color/colorRed"
-                android:text="1" />
+                android:textSize="20sp" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/add"
                 android:background="@color/colorWhite"
-                android:onClick="onClickAdd"/>
+                android:onClick="onClickAdd"
+                app:srcCompat="@drawable/add" />
 
         </LinearLayout>
-
 
 
         <Button
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
             android:layout_marginHorizontal="10dp"
-            android:text="Add to Bucket"
+            android:layout_weight="3"
             android:background="@color/colorRed"
+            android:onClick="AddToBucket"
+            android:text="Add to Bucket"
             android:textColor="@color/colorWhite"
-            android:textStyle="bold"
-            android:onClick="AddToBucket"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -124,4 +125,6 @@
             android:textColor="@color/colorBlack"
             android:textStyle="bold"/>
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
