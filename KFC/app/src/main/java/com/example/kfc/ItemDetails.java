@@ -20,9 +20,9 @@ import java.util.List;
 
 public class ItemDetails extends AppCompatActivity {
     int items = 1,total_price=0;
-    TextView name, price, count;
+    TextView name, price, count,description;
     ImageView item_image;
-    String item_name, item_price, imageURL;
+    String item_name, item_price, imageURL,item_description;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -36,12 +36,17 @@ public class ItemDetails extends AppCompatActivity {
         item_name = i.getStringExtra("ITEM_NAME");
         item_price = i.getStringExtra("ITEM_PRICE");
         imageURL = i.getStringExtra("ITEM_IMAGE");
+        item_description=i.getStringExtra("ITEM_DESCRIPTION");
+        description=(TextView)findViewById(R.id.item_description);
+
         count = (TextView) findViewById(R.id.item_count);
         name = (TextView) findViewById(R.id.item_name);
         price = (TextView) findViewById(R.id.item_price);
         item_image = (ImageView) findViewById(R.id.item_image_img);
         name.setText(item_name);
         total_price=Integer.valueOf(item_price);
+        description.setText(item_description);
+
         price.setText("PKR " + item_price);
         Picasso.get().load(imageURL).into(item_image);
     }

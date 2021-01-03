@@ -62,7 +62,7 @@ public class ItemViewAdapter {
                     intent.putExtra("ITEM_NAME", itemsList.get(position).getName());
                     intent.putExtra("ITEM_PRICE", String.valueOf(itemsList.get(position).getPrice()));
                     intent.putExtra("ITEM_IMAGE", itemsList.get(position).getImage());
-
+                    intent.putExtra("ITEM_DESCRIPTION", itemsList.get(position).getDescription());
                     activity.startActivityForResult(intent, 1);
 
                 }
