@@ -7,10 +7,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -19,6 +21,8 @@ public class MoreActivity extends AppCompatActivity {
     NavigationView nav;
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
+    String firstName="",lastName="",userEmail="";
+    TextView nav_title,nav_subtitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +31,18 @@ public class MoreActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.more_toolbar);
         setSupportActionBar(toolbar);//setting the Action bar of this activity.
 
+        SharedPreferences sharedPreferences=getSharedPreferences(MainActivity.SHARED_PREFS,MODE_PRIVATE);
+        firstName=sharedPreferences.getString("firstName","");
+        lastName=sharedPreferences.getString("lastName","");
+        userEmail=sharedPreferences.getString("userEmail","");
+
         nav=findViewById(R.id.navigation_menu);
         drawerLayout=findViewById(R.id.drawer_more);
+        View headerView=nav.getHeaderView(0);
+        nav_title=(TextView) headerView.findViewById(R.id.nav_header_title);
+        nav_subtitle=(TextView) headerView.findViewById(R.id.nav_header_subtitle);
+        nav_title.setText(firstName+" "+lastName);
+        nav_subtitle.setText(userEmail);
 
         toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_nav,R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
@@ -44,7 +58,6 @@ public class MoreActivity extends AppCompatActivity {
                         startActivity(inte);
                         break;
                     case R.id.nav_menu:
-
                         intent=new Intent(getApplicationContext(),Menu.class);
                         startActivity(intent);
                         break;
@@ -58,7 +71,9 @@ public class MoreActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_logout:
                         intent=new Intent(getApplicationContext(),MainActivity.class);
+                        Toast.makeText(MoreActivity.this, "Successfully Logout", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
+
                         break;
                 }
                 return false;

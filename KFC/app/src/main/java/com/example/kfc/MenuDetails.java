@@ -8,9 +8,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -26,7 +28,7 @@ public class MenuDetails extends AppCompatActivity {
         setContentView(R.layout.activity_menu_details);
         Toolbar toolbar = findViewById(R.id.Menu_Details_toolbar);
         setSupportActionBar(toolbar);//setting the Action bar of this activity.
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
 
 
         Intent intent=getIntent();

@@ -22,17 +22,18 @@
         app:srcCompat="@drawable/nav_logo" />
 
     <TextView
+        android:id="@+id/nav_header_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Title"
+        android:text="Guest"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nav_header_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Subtitle" />
+        android:text="Welcome" />
 </LinearLayout>
