@@ -21,6 +21,14 @@
     <dimen name="button_padding_horizontal">6dp</dimen>
     <dimen name="button_padding_vertical">0dp</dimen>
     <dimen name="button_margin_bottom">5dp</dimen>
+    <dimen name="image_height">280dp</dimen>
+    <dimen name="linear_layout_margin">2dp</dimen>
+    <dimen name="linear_layout_padding">10dp</dimen>
+    <dimen name="item_counter_padding">20dp</dimen>
+    <dimen name="item_counter_text_size">20sp</dimen>
+    <dimen name="add_to_bucket_margin_horizontal">10dp</dimen>
+    <dimen name="item_desc_text_size">20sp</dimen>
+
 
 
 </resources>

@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/item_image_img"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="@dimen/image_height"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,12 +25,12 @@
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
+        android:layout_marginStart="@dimen/linear_layout_margin"
+        android:layout_marginLeft="@dimen/linear_layout_margin"
         android:background="@color/colorWhite"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
+        android:paddingVertical="@dimen/linear_layout_padding"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingHorizontal="20dp">
+            android:paddingHorizontal="@dimen/item_counter_padding">
 
             <ImageButton
                 android:id="@+id/imageButton"
@@ -53,7 +53,8 @@
 
                 android:background="@color/colorWhite"
                 android:onClick="onClickSubtract"
-                app:srcCompat="@drawable/minus" />
+                app:srcCompat="@drawable/minus"
+                tools:ignore="VectorDrawableCompat" />
 
             <TextView
                 android:id="@+id/item_count"
@@ -63,7 +64,7 @@
                 android:gravity="center"
                 android:text="1"
                 android:textColor="@color/colorRed"
-                android:textSize="20sp" />
+                android:textSize="@dimen/item_counter_text_size" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
@@ -72,7 +73,9 @@
                 android:layout_weight="1"
                 android:background="@color/colorWhite"
                 android:onClick="onClickAdd"
-                app:srcCompat="@drawable/add" />
+                app:srcCompat="@drawable/add"
+                tools:ignore="VectorDrawableCompat"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
@@ -81,11 +84,11 @@
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="@dimen/add_to_bucket_margin_horizontal"
             android:layout_weight="3"
             android:background="@color/colorRed"
             android:onClick="AddToBucket"
-            android:text="Add to Bucket"
+            android:text="@string/add_to_bucket"
             android:textColor="@color/colorWhite"
             android:textStyle="bold" />
 
@@ -124,6 +127,25 @@
             android:layout_marginRight="@dimen/text_margin_left"
             android:textColor="@color/colorBlack"
             android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:paddingVertical="@dimen/linear_layout_padding"
+        android:paddingHorizontal="@dimen/text_margin_left">
+
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textSize="@dimen/item_desc_text_size"
+            />
     </LinearLayout>
 
 
