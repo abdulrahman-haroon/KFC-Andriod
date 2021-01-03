@@ -8,6 +8,13 @@
     <string name="contact_info">CONTACT INFORMATION</string>
     <string name="login_here"><u>Login Here</u></string>
     <string name="home_page">Home</string>
+    <string name="home_text">
+        We provide the best service and best fast food.
+        Order Now and enjoy your meal.\n \n
+        For More Deals click the button.\n
+
+    </string>
+    <string name="viiew_more">View All Deals</string>
     <string name="already_have_account">Already have an account? </string>
 
     <string name="store_location">Store Location  </string>

@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.icu.number.Scale;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,7 +17,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Home_Page extends AppCompatActivity {
 
@@ -32,8 +39,19 @@ public class Home_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home__page);
 
-        Toolbar toolbar = findViewById(R.id.home_toolbar);
+        ImageSlider imageSlider=(ImageSlider) findViewById(R.id.home_slider);
+
+        //lpic/26-263518_tumblr-photography-wallpaper-rocks-on-earth-background.jpg","1 image"));
+
+        //List<SlideModel> imagLi
+      Toolbar toolbar = findViewById(R.id.home_toolbar);
         setSupportActionBar(toolbar);
+
+        List<SlideModel> slideModels=new ArrayList<>();
+        slideModels.add(new SlideModel(R.drawable.pro_1,""));
+        slideModels.add(new SlideModel(R.drawable.deal2,""));
+        slideModels.add(new SlideModel(R.drawable.deal3,""));
+        imageSlider.setImageList(slideModels,false);
 
 
         SharedPreferences sharedPreferences=getSharedPreferences(MainActivity.SHARED_PREFS,MODE_PRIVATE);
@@ -41,8 +59,8 @@ public class Home_Page extends AppCompatActivity {
         lastName=sharedPreferences.getString("lastName","");
         userEmail=sharedPreferences.getString("userEmail","");
 
-        nav = findViewById(R.id.navigation_menu_home);
-        drawerLayout = findViewById(R.id.drawer_home);
+       nav = findViewById(R.id.navigation_menu_home);
+       drawerLayout = findViewById(R.id.drawer_home);
         View headerView=nav.getHeaderView(0);
         nav_title=(TextView) headerView.findViewById(R.id.nav_header_title);
         nav_subtitle=(TextView) headerView.findViewById(R.id.nav_header_subtitle);
@@ -59,7 +77,7 @@ public class Home_Page extends AppCompatActivity {
                 Intent intent;
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        Intent i = new Intent(getApplicationContext(), Promotion_Deals.class);
+                        Intent i = new Intent(getApplicationContext(), Home_Page.class);
                         i.putExtra("Promotion", R.drawable.pro_1);
                         startActivity(i);
                     case R.id.nav_menu:
@@ -87,27 +105,9 @@ public class Home_Page extends AppCompatActivity {
 
     }
 
-    public void DealoneClick(View view) {
 
-        Intent i = new Intent(this, Promotion_Deals.class);
-        i.putExtra("Promotion", R.drawable.pro_1);
-        //i.putExtra("Title",R.id.textdeal1);
-        startActivity(i);
-
-
-    }
-
-    public void onClickDeal_2(View view) {
-        Intent i = new Intent(this, Promotion_Deals.class);
-        i.putExtra("Promotion", R.drawable.deal2);
-        //  i.putExtra("Title",R.id.textdeal2);
-        startActivity(i);
-    }
-
-    public void onClickDeals_3(View view) {
-        Intent i = new Intent(this, Promotion_Deals.class);
-        i.putExtra("Promotion", R.drawable.deal3);
-        // i.putExtra("Title",R.id.textdeal3);
+    public void ViewallDeals(View view) {
+        Intent i = new Intent(this, Menu.class);
         startActivity(i);
     }
 }

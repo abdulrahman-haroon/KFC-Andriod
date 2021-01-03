@@ -4,7 +4,9 @@
     <dimen name="login_fields_margin_top">10dp</dimen>
     <dimen name="login_fields_margin_top_tv">15dp</dimen>
     <dimen name="login_fields_margin_right">5dp</dimen>
-
+    <dimen name="home_title">33sp</dimen>
+    <dimen name="home_text">20sp</dimen>
+    <dimen name="view_all">20sp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
@@ -21,6 +23,7 @@
     <dimen name="button_padding_horizontal">6dp</dimen>
     <dimen name="button_padding_vertical">0dp</dimen>
     <dimen name="button_margin_bottom">5dp</dimen>
+
 
 
 </resources>

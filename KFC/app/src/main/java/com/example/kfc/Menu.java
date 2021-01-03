@@ -68,6 +68,8 @@ public class Menu extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.nav_home:
 
+                        intent=new Intent(getApplicationContext(),Home_Page.class);
+                        startActivity(intent);
                         break;
                     case R.id.nav_menu:
 
