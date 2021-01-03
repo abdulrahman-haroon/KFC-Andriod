@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickGuest(View view) {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("phoneNo", "Guest");
         editor.putString("firstName", "Guest");
         editor.putString("lastName", " ");
         editor.putString("userEmail", "Welcome");
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Succuessfully Login", Toast.LENGTH_SHORT).show();
                             SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("phoneNo", phoneNo);
                             editor.putString("firstName", firstName);
                             editor.putString("lastName", lastName);
                             editor.putString("userEmail", userEmail);

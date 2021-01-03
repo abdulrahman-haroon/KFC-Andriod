@@ -26,6 +26,8 @@
     <string name="open_nav">open</string>
     <string name="close_nav">close</string>
 
+    <string name="remove_bucket_item"><u>REMOVE</u></string>
+
 
     <string-array name="country">
         <item>Country</item>

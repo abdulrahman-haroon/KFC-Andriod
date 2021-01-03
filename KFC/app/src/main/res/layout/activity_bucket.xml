@@ -8,18 +8,20 @@
     android:background="@color/colorLightGray"
     tools:context=".MoreActivity"
     android:id="@+id/drawer_bucket"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".BucketActivity"
         android:background="@color/colorLightGray">
+
         <include
             android:id="@+id/bucket_toolbar"
             layout="@layout/toolbar" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/bucket_empty_img"
             android:layout_width="411dp"
             android:layout_height="193dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -28,28 +30,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bucket_toolbar"
             app:layout_constraintVertical_bias="0.033"
+
             app:srcCompat="@drawable/bucket" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/bucket_empty_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hungry"
             android:textStyle="bold"
             android:textSize="20dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/bucket_empty_img"
             app:layout_constraintVertical_bias="0.02" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/bucket_empty_btn"
             android:layout_width="204dp"
             android:layout_height="48dp"
             android:text="@string/start_order"
             android:background="@color/colorRed"
+
             android:textColor="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +62,78 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bucket_toolbar"
             app:layout_constraintVertical_bias="0.427"
-            android:onClick="onClickStartOrder"/>
+            android:onClick="onClickStartOrder"
+            tools:ignore="OnClick" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bucket_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="393dp"
+            android:layout_marginTop="5dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bucket_toolbar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/select_area_bucket"
+            android:layout_width="match_parent"
+            android:layout_height="163dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bucket_toolbar"
+            android:visibility="invisible"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.081"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.128" />
+
+            <TextView
+                android:id="@+id/bucket_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.945"
+                app:layout_constraintStart_toEndOf="@+id/textView18"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.128" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="287dp"
+                android:layout_height="39dp"
+                android:background="@color/colorBlack"
+                android:text="SELECT DELIVERY AREA"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.497"
+                android:onClick="onClickSelectArea"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
