@@ -51,13 +51,18 @@ public class ItemViewAdapter {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull DataItemView holder, int position) {
+        public void onBindViewHolder(@NonNull DataItemView holder, final int position) {
             holder.Bind(itemsList.get(position),keys.get(position));
             holder.item_row_layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, "Items selected", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, itemsList.get(position).getName(), Toast.LENGTH_SHORT).show();
                     // Your Logic here
+                    Intent intent = new Intent(context, ItemDetails.class);
+                    intent.putExtra("ITEM_NAME", itemsList.get(position).getName());
+                    intent.putExtra("ITEM_PRICE", String.valueOf(itemsList.get(position).getPrice()));
+                    intent.putExtra("ITEM_IMAGE", itemsList.get(position).getImage());
+                    activity.startActivityForResult(intent, 1);
 
                 }
             });
@@ -90,7 +95,7 @@ public class ItemViewAdapter {
         {
             name.setText(promotions.getName());
             price.setText("PKR: "+String.valueOf(promotions.getPrice()));
-            Picasso.get().load(promotions.getImage()).resize(320,280).into(image);
+            Picasso.get().load(promotions.getImage()).resize(300,260).into(image);
             this.keys=key;
 
         }
