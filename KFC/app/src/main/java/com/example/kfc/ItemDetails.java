@@ -71,7 +71,7 @@ public class ItemDetails extends AppCompatActivity {
     }
 
     public void AddToBucket(View view) {
-        Toast.makeText(this, "Add To Bucket", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Item Added To Bucket", Toast.LENGTH_SHORT).show();
 //        FoodItemModel foodItemModel=new FoodItemModel();
 //        foodItemModel.name=item_name;
 //        foodItemModel.price=Integer.valueOf(item_price);
