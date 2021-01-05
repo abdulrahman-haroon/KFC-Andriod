@@ -56,8 +56,7 @@ public class ItemViewAdapter {
             holder.item_row_layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, itemsList.get(position).getDescription(), Toast.LENGTH_SHORT).show();
-                    // Your Logic here
+                  
                     Intent intent = new Intent(context, ItemDetails.class);
                     intent.putExtra("ITEM_NAME", itemsList.get(position).getName());
                     intent.putExtra("ITEM_PRICE", String.valueOf(itemsList.get(position).getPrice()));
