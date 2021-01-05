@@ -77,9 +77,9 @@ public class Home_Page extends AppCompatActivity {
                 Intent intent;
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        Intent i = new Intent(getApplicationContext(), Home_Page.class);
-                        i.putExtra("Promotion", R.drawable.pro_1);
-                        startActivity(i);
+                        intent = new Intent(getApplicationContext(), Home_Page.class);
+                        startActivity(intent);
+                        break;
                     case R.id.nav_menu:
                         //Toast.makeText(getApplicationContext(), "Menu", Toast.LENGTH_SHORT).show();
                         intent = new Intent(getApplicationContext(), Menu.class);
